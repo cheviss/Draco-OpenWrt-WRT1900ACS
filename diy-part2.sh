@@ -126,10 +126,10 @@ sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-s
 popd
 
 # patch
-pushd ${GITHUB_WORKSPACE}/openwrt
-cp -a ${GITHUB_WORKSPACE}/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
-cat 0003-upx-ucl-21.02.patch | patch -p1 > /dev/null 2>&1
-popd
+# pushd ${GITHUB_WORKSPACE}/openwrt
+# cp -a ${GITHUB_WORKSPACE}/0003-upx-ucl-21.02.patch ${GITHUB_WORKSPACE}/openwrt
+# cat 0003-upx-ucl-21.02.patch | patch -p1 > /dev/null 2>&1
+# popd
 
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
